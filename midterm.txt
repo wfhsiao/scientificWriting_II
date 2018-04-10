@@ -14,7 +14,7 @@ What is the population of Taiwan?
 Convert Chinese Yuan to Taiwan dollars.
 Convert US dollars to Taiwan dollars.
 Convert 130 pounds into kilograms.
-Convert 80 degree Fahrenheit to Celsius.
+Convert 82 degree Fahrenheit to Celsius.
 What does the fox say?
 What is 18887/1111?
 Who’s the president of United States?
