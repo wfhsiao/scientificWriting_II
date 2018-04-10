@@ -14,18 +14,26 @@ What is the population of Taiwan?
 Convert Chinese Yuan to Taiwan dollars.
 Convert US dollars to Taiwan dollars.
 Convert 130 pounds into kilograms.
-Convert 80 Fahrenheit to Celsius.
+Convert 80 degree Fahrenheit to Celsius.
 What does the fox say?
-What are the factors of 18887?
+What is 18887/1111?
+Who’s the president of United States?
+How old is he?
+How many children does he have?
+How many wives did he marry to?
+How to spell confidential.
+How to pronounce c o n f i d e n t i a l?
+in Chinese
+What is ‘think on your feet’?
+‘I love you’ in Chinese
+What is the life span of a person in Taiwan?
+What is the life span of a person in the world?
+
 What comes down but never goes up?
 What goes up but never comes down?
 What’s the difference between recycle bin and rubbish bin?
 What’s the difference between garbage and trash and rubbish?
 What is a machine?
-Who’s the president of United States?
-How old is he?
-How many children does he have?
-How many wives did he marry to?
 Tell me about alpha go.
 Who is Sophia the robot?
 What is humanoid robot?
@@ -33,9 +41,6 @@ What is social robot?
 Tell me about tensorflow.
 Define confidential
 confidential in Chinese
-‘How are you’ in Chinese
-How to spell confidential.
-What is ‘think on your feet’?
 How to pronounce n e u r o n?
 I'm particularly proud of how I organised the finances for the debating society. 
 We had a very small budget and I had to make decisions on what to buy.
