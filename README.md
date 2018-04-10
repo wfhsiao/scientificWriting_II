@@ -1,5 +1,12 @@
 # scientificWriting
 
+<a href='https://quizlet.com/_4pmsy8'>Dolch word list (pre-primary)</a><br />
+<a href='https://quizlet.com/_4pmtcf'>Dolch word list (primary)</a><br />
+<a href='https://quizlet.com/_4pmtg2'>Dolch word list (1st grade)</a><br />
+<a href='https://quizlet.com/_4pmtk3'>Dolch word list (2nd grade)</a><br />
+<a href='https://quizlet.com/_4pmtnf'>Dolch word list (3rd grade)</a><br />
+<a href='https://quizlet.com/_4pmsss'>Dolch word list (noun)</a><br />
+
 學號	姓名	作業一	作業二<br />
 CAC103007	林伯倫 <a href=''>hw1</a>	<a href=''>hw2</a><br />
 CBF104060	陳順榮	<a href='https://www.youtube.com/watch?v=0J9t9yyihrI&feature=youtu.be'>hw1</a>	<a href='https://www.youtube.com/watch?v=4k9ZLeIiQnQ'>04 Doing lunch</a>  <a href='https://www.youtube.com/watch?v=Z7ugOBNvRPs'>hw2</a>  <a href='https://quizlet.com/283330301/language-for-interviews-01-flash-cards/'>hw3(quizlet)</a><br />
