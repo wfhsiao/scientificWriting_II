@@ -1,4 +1,4 @@
-What’s the meaning of life?
+﻿What’s the meaning of life?
 1.01^999 (1.01 to the 999th power)
 How much wood would a woodchuck chuck if a woodchuck could chuck wood?
 What are the nine planets in the solar system?
@@ -49,7 +49,7 @@ A good example that comes to mind is when I was involved with a campaign to prom
 
 show me the airlines to Japan in 24 hours？
 what is the average height of a woman in Taiwan？
-how many countries have diplomatic relationship with Taiwan？
+how many countries have diplomatic relationship (official ties) with Taiwan？
 how many 7-Eleven convenience stores are in Taiwan？
 how many motorcycles are in Taiwan？
 What to prepare for self-help travel?

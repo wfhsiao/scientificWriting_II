@@ -1,0 +1,10 @@
+And the only thing it has to do with the first
+half of the class is that both use the Filtered
+Classifier.
+
+What we're going to do is use a filter, the
+StringToWordVector filter--Unsupervised, Attribute,
+StringToWordVector--which is here.
+
+It's got a bunch of options, but let's just apply it.
+
