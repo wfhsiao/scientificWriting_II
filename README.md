@@ -9,7 +9,7 @@ CBF105018	陳克威	<a href='https://quizlet.com/_4pf5ou'>quizlet</a>|<a href=''
 CBF105021	劉祐鑫	<a href='https://quizlet.com/284495300/double-booked-flash-cards/'>quizlet</a>|<a href='https://youtu.be/SPSug-N3_Io'>midterm</a>|<a href='https://youtu.be/wonjyhDUwdg'>midterm-2</a><br />
 CBF105027	林冠廷	<a href='https://quizlet.com/_4pdh3i'>quizlet</a>|<a href='https://www.youtube.com/watch?v=y0QlRVz1Klc&feature=youtu.be'>midterm</a><br />
 CBF105028	駱明佑	<a href='https://youtu.be/IN1sL3RDvGs'>midterm</a><br />
-CBF105035	李佳薇	<a href='https://quizlet.com/_4pdjur'>quizlet</a>|<a href=''>midterm</a><br />
+CBF105035	李佳薇	<a href='https://quizlet.com/_4pdjur'>quizlet</a>|<a href='https://www.youtube.com/watch?v=kudVe8BAr7s&feature=youtu.be'>midterm</a><br />
 CBF105038	蔡佳螢	<a href='https://quizlet.com/284833859/11-overtime-flash-cards/'>quizlet</a> | <a href='https://www.youtube.com/watch?v=CMjiIQAHdWs&feature=youtu.be'>midterm</a><br />
 CBF105044	謝蕙如	<a href='https://www.youtube.com/watch?v=yM9iwF-3oCE&feature=youtu.be'>1</a>|<a href='https://www.youtube.com/watch?v=TeigXWZLz2c&feature=youtu.be'>2</a>|<a href='https://www.youtube.com/watch?v=s-v97IyhSK8&feature=youtu.be'>3</a><br />
 CBF105049	楚宜澄	<a href='https://quizlet.com/284134765/the-imperial-lemon-13-flash-cards/'>quizlet507</a>|<a href='https://www.youtube.com/watch?v=l-U22D0wT54&feature=youtu.be'>midterm</a><br />
