@@ -5,7 +5,7 @@ CBF104060	陳順榮	<a href='https://www.youtube.com/watch?v=hRGy4WmTIhE'>midter
 CBF104061	張舒涵	<a href='https://www.youtube.com/watch?v=hNVyhhszVBU&feature=youtu.be'>midterm</a><br />
 CBF105003	林士傑	<a href='https://youtu.be/JlLW4zx88Ck'>1-30</a> | <a href='https://youtu.be/IkG91vfcZ9E'>31-58</a><br />
 CBF105010	蔡廷郡	<a href='https://youtu.be/R5HUcuOc_Os'>midterm</a><br />
-CBF105018	陳克威	<a href='https://quizlet.com/_4pf5ou'>quizlet</a>|<a href=''>midterm</a><br />
+CBF105018	陳克威	<a href='https://quizlet.com/_4pf5ou'>quizlet</a>|<a href='https://youtu.be/k-hm-SM_D8o'>midterm</a><br />
 CBF105021	劉祐鑫	<a href='https://quizlet.com/284495300/double-booked-flash-cards/'>quizlet</a>|<a href='https://youtu.be/SPSug-N3_Io'>midterm</a>|<a href='https://youtu.be/wonjyhDUwdg'>midterm-2</a><br />
 CBF105027	林冠廷	<a href='https://quizlet.com/_4pdh3i'>quizlet</a>|<a href='https://www.youtube.com/watch?v=y0QlRVz1Klc&feature=youtu.be'>midterm</a><br />
 CBF105028	駱明佑	<a href='https://youtu.be/IN1sL3RDvGs'>midterm</a><br />
