@@ -1,0 +1,436 @@
+Welcome to this deep learning lecture.
+My name is Vincent, and I'm a research scientist at Google working on machine
+learning and artificial intelligence.
+Deep learning is an exciting branch of machine learning that uses data,
+lots of data,
+to teach computers how to do things only humans were capable of before.
+Myself, I am very interested in solving the problem of perception.
+Recognizing what's in an image, what people are saying when they are talking
+on their phone, helping robots explore the world and interact with it.
+Deep learning is emerge as a central tool to solve perception problems
+in recent years.
+It's the state of the art having to do with computer vision and
+speech recognition.
+But there's more.
+Increasingly, people are finding that deep learning is a much better
+tool to solve problems like discovering new medicines, understanding natural
+language, understanding documents, and for example, ranking them for search.
+So let's take a look at what you'll be doing during this class.
+This course has four parts.
+Just now, you're going to lay the foundations by training your first
+simple model entirely end-to-end.
+For that, we'll need to talk about logistic classification,
+stochastic optimization and general data practices to train models.
+In the next session, we're going to go deeper.
+You'll train your first deep network and you'll also learn to
+apply regularization techniques to train even bigger models.
+The third session will be a deep dive into images and convolutional models.
+The fourth session, all about text and sequences in general.
+We'll train embeddings and recurrent models.
+This is going to be a very hands-on course.
+The assignments are IPython notebooks that you can read and modify easily.
+Play with them and try things out.
+We will use them alongside the lectures
+to make everything you will hear about very concrete.
+All the code will be written in TensorFlow,
+a very simple Python-based deep learning toolkit.
+By the time you are done with these lectures,
+you'll be able to apply all this knowledge to new problems
+entirely by yourself with a handful of lines of code.
+
+machine learning toolkit.
+Facebook, Baidu, Microsoft, and Google are all using deep learning in their
+products and pushing their research forward.
+It's easy to understand why.
+Deep learning shines wherever there is lots of data and
+complex problems to solve.
+And all these companies are facing lots of complicated problems,
+like understanding what's in an image to help you find it, or
+translating a document into another language that you can speak.
+In this class, we'll explore a continuum of complexity,
+from very simple models to very large ones that you'll still be able to train
+in minutes on your personal computer to do very elaborate tasks.
+Like predicting the meaning of words or classifying images.
+One of the nice things about deep learning is that it's really a family of
+techniques that adapts to all sorts of data and all sorts of problems,
+all using a common infrastructure and a common language to describe things.
+When I began working in machine learning,
+I was doing research on speech recognition.
+Whenever I met someone working on computer vision or
+natural language processing, we had very little in common to talk about.
+We used different acronyms, different techniques, and
+collaboration was pretty much impossible.
+Deep learning really changed that.
+The basic things that you will learn in this class are applicable to
+almost everything, and will give you a foundation that you can apply to many,
+many different fields.
+You'll be part of a fast growing community of researchers, engineers, and
+data scientists who share a common, very powerful set of tools.
+
+A lot of the important work on neural networks happened in the 80's and
+in the 90's but back then computers were slow and datasets very tiny.
+The research didn't really find many applications in the real world.
+As a result, in the first decade of the 21st century neural networks have
+completely disappeared from the world of machine learning.
+Working on neural networks was definitely fringe.
+It's only in the last few years, first seeing speech recognition around 2009,
+and then in computer vision around 2012,
+that neural networks made a big comeback.
+What changed?
+Lots of data and cheap and fast GPU's.
+Today, neural networks are everywhere.
+So if you're doing anything with data, analytics or
+prediction, they're definitely something that you want to get familiar with.
+So let's get started.
+
+This entire course, I'm going to focus on the problem of classification.
+Classification is the task of taking an input, like this letter, and
+giving it a label that says, this is a B.
+The typical setting is that you have a lot of examples,
+called the training set, that I've already been sorted in.
+This is an A, this is a B, and so on.
+Now, here's a completely new example.
+And your goal is going to be to figure out which of those classes
+it belongs to.
+There is a lot more to machine learning that just classification.
+But classification, or
+marginally prediction, is the central building block of machine learning.
+Once you know how to classify things, it's very easy, for
+example, to learn how to detect them, or to rank them.
+
+So let's learn about classification.
+Here is the plan.
+I'm going to tell you just enough, so that you can put together a very simple,
+but very important type of classifier, called the logistic classifier.
+With that, you'll be able to run through the first assignment which will have you
+download and pre-process some images for classification.
+And then run an actual logistic classifier on that data.
+Once you've connected the bit of math that's coming up and the code in
+that first assignment, everything else will just be building up from there.
+We will be building together all of deeplearning on top of this piece,
+block by block.
+
+So let's get started training a logistic classifier.
+A logistic classifier is what's called the linear classifier.
+It takes the input, for example, the pixels in an image, and
+applies a linear function to them to generate its predictions.
+A linear function is just a giant matrix multiply.
+It take all the inputs as a big vector, that will denote X, and multiplies
+them with a matrix to generate its predictions, one per output class.
+Throughout, we'll denote the inputs by X, the weights by W, and
+the biased term by b.
+The weights of the matrix and the bias, is where the machine learning comes in.
+We're going to train that model.
+That means we're going to try to find the values for the weights and
+bias, which are good at performing those predictions.
+How are we going to use the scores to perform the classification?
+Well, let's recap our task.
+Each image, that we have as an input can have one and only one possible label.
+So, we're going to turn the scores into probabilities.
+We're going to want the probability of the correct class to be very close to
+one and the probability for every other class to be close to zero.
+The way to turn scores into probabilities is to
+use a softmax function, which I'll denote here by S.
+This is what it looks like.
+But beyond the formula, what's important to know about it
+is that it can take any kind of scores and turn them into proper probabilities.
+Proper probabilities, sum to 1, and they will be large
+when the scores are large and small when the scores are comparatively smaller.
+Scores in the context of logistic regression are often also called logits.
+
+In other words, if you increase the size of your outputs,
+your classifier becomes very confident about its predictions.
+But if you reduce the size of your outputs,
+your classifier becomes very unsure.
+Keep this in mind for later.
+We'll want our classifier to not be too sure of itself in the beginning.
+And then over time, it will gain confidence as it learns.
+Next, we need a way to represent our labels mathematically.
+We just said, let's have the probabilities for the correct class be
+close to 1, and the probability for all the others be close to 0.
+We can write exactly with that.
+Each label will be represented by a vector
+that is as long as there are classes and
+it has the value 1.0 for the correct class and 0 every where else.
+This is often called one-hot encoding.
+
+One-hot encoding works very well from most problems until you
+get into situations where you have tens of thousands, or
+even millions of classes.
+In that case, your vector becomes really, really large and
+has mostly zeros everywhere and that becomes very inefficient.
+You'll see later how we can deal with these problems using embeddings.
+What's nice about this approach is that we can now measure how well we're doing
+by simply comparing two vectors.
+One that comes out of your classifiers and contains the probabilities of your
+classes and the one-hot encoded vector that corresponds to your labels.
+Let's see how we can do this in practice.
+The natural way to measure the distance between those two probability vectors is
+called the Cross Entropy.
+I'll denote it by D here for distance.
+Math, it looks like this.
+Be careful, the cross entropy is not symmetric and
+you have a nasty log in there.
+So you have to make sure that your labels and
+your distributions are in the right place.
+Your labels, because they're one-hot encoded, will have a lot of
+zeroes in them and you don't want to take the log of zeroes.
+For your distribution, the softmax will always guarantee that you have a little
+bit of probability going everywhere, so you never really take a log of zero.
+So let's recap, because we have a lot of pieces already.
+So we have an input, it's going to be turned into logits using a linear model,
+which is basically your matrix multiply and a bias.
+We're then going to feed the logits, which are scores,
+into a softmax to turn them into probabilities.
+And then we're going to compare those probabilities to the one-hot encoded
+labels using the cross entropy function.
+This entire setting is often called multinomial logistic classification.
+
+Okay, so now we have all the pieces of our puzzle.
+The question of course is how we're going to find those weights w and
+those biases b that will get our classifier to do what we want it to do.
+That is, have a low distance for the correct class but
+have a high distance for the incorrect class.
+One thing you can do is measure that distance averaged over the entire
+training sets for all the inputs and all the labels that you have available.
+That's called the training loss.
+This loss, which is the average cross-entropy over your entire training
+set, Is one humongous function.
+Every example in your training set gets multiplied by this one big matrix W.
+And then they get all added up in one big sum.
+We want all the distances to be small, which would mean we're
+doing a good job at classifying every example in the training data.
+So we want the loss to be small.
+The loss is a function of the weights and the biases.
+So we are simply going to try and minimize that function.
+Imagine that the loss is a function of two weights.
+Weight one and weight two.
+Just for the sake of argument.
+It's going to be a function which will be large in some areas, and
+small in others.
+We're going to try the weights which cause this loss to be the smallest.
+We've just turned the machine learning problem
+into one of numerical optimization.
+And there's lots of ways to solve a numerical optimization problem.
+The simplest way is one you've probably encountered before, gradient descent.
+Take the derivative of your loss, with respect to your parameters, and
+follow that derivative by taking a step backwards and
+repeat until you get to the bottom.
+Gradient descent is relatively simple, especially when you
+have powerful numerical tools that compute the derivatives for you.
+Remember, I'm showing you the derivative for
+a function of just two parameters here, but for a typical problem
+it could be a function of thousands, millions or even billions of parameters.
+
+In the coming lectures, I'll talk about these tools that compute the derivatives
+for you, and a lot about what's good and bad about grading descent.
+For the moment, though, we'll assume that I give you the optimizer as a black
+box that you can simply use.
+There are two last practical things that stand in your way of training
+your first model.
+First is how do you fill image pixels to this classifier and
+then where do you initialize the optimization?
+Let's look into this.
+
+In the example in the quiz, the math says the result should be 1.0.
+But the code says 0.95.
+That's a big difference.
+Go ahead, replace the one billion with just one, and
+you'll see that the error becomes tiny.
+We're going to want the values involved in the calculation of this
+big loss function that we care about to never get too big or too small.
+One good guiding principle is that we always want our
+variables to have zero mean and equal variance whenever possible.
+On top of the numeric issues,
+there are also really good mathematical reasons to keep values you compute.
+Roughly around a mean of zero, an equal variance when you're doing optimization.
+A badly conditioned problem means that the optimizer has to do
+a lot of searching to go and find a good solution.
+A well conditioned problem makes it a lot easier for
+the optimizer to do its job.
+If your dealing with images, it's simple.
+You can take the pixel values of your image, they are typically between 0 and
+255.
+And simply subtract 128 and divide by 128.
+It doesn't change the content of your image, but it makes it much easier for
+the optimization to proceed numerically.
+You also want your weights and biases to be initialized at
+a good enough starting point for the gradient descent to proceed.
+There are lots of fancy schemes to find good initialization values, but
+we're going to focus on a simple, general method.
+Draw the weights randomly from a Gaussian distribution with mean zero and
+standard deviation sigma.
+The sigma value determines the order of magnitude of your outputs
+at the initial point of your optimization.
+Because of the soft max on top of it, the order of magnitude
+also determines the peakiness of your initial probability distribution.
+A large sigma means that your distribution will have large peaks.
+It's going to be very opinionated.
+A small sigma means that your distribution is very uncertain
+about things.
+It's usually better to begin with an uncertain distribution and
+let the optimization become more confident as the train progress.
+So use a small sigma to begin with.
+Okay, so
+now we actually have everything we need to actually train this classifier.
+We've got our training data, which is normalized to have zero mean and
+unit variance.
+We multiply it by a large matrix, which is initialized with random weights.
+We apply the soft max and then the cross entropy loss and
+we calculate the average of this loss over the entire training data.
+Then our magical optimization package computes
+the derivative of this loss with respect to the weights and to the biases and
+takes a step back in the direction opposite to that derivative.
+And then we start all over again, and
+repeat the process until we reach a minimum of the loss function.
+
+We've just gone over the essential things that you need
+to be able to train a simple linear classification model.
+Now, it's your turn.
+How well does this work?
+Pretty well, as you will see in your first assignment.
+The first part of it will have you download and
+pre-process an image data set that you will be reusing throughout the lectures,
+and that you can use yourself to experiment with.
+The second part will have you go through an exact re-implementation,
+piece by piece,
+of all the components of the logistic classifier that we've discussed so far.
+Make sure that you carefully step through the code before coming back to
+the videos.
+Run it, break it, tinker with it.
+We'll be building on top of it for the rest of the lecture.
+You'll also quickly see some of the problems with the simple approach.
+It can be very slow.
+Even for
+a simple model like this linear model on a very small amount of training data.
+Scaling this up is what deep learning is all about.
+
+Now that you have trained your first model.
+There is something very important I want to discuss.
+You might have seen in the assignment that we had a training set
+as well as a validation set and a test set.
+What is that all about?
+Don't skip that part, it has to do with measuring how well you're doing,
+without accidentally shooting yourself in the foot.
+And it is a lot more subtle than you might initially think.
+It's also very important because as we'll discover later, once you know how
+to measure your performance on a problem you've already solved half of it.
+Let me explain why measuring performance is subtle.
+Let's go back to our classification task.
+You've got a whole lot of images with labels.
+You could say, okay, I'm going to run my classifier on those images and
+see how many I got right.
+That's my error measure, and then you go out and use your classifier on new
+images, images that you've never seen in the past.
+And you measure how many you get right, and
+your performance gets worse, the classifier doesn't do as well.
+So what happened?
+Well imagine I construct a classifier that simply compares the new image to
+any of the other images that I've already seen in my training set, and
+just return the label.
+By the measure we defined earlier, it's a great classifier.
+It would get 100% accuracy on the training sets.
+But as soon as it sees a new image it's lost, it has no idea what to do.
+It's not a great classifier.
+The problem is that your classifier has memorized the training set and
+it fails to generalize to new examples.
+It's not just a theoretical problem.
+Every classifier that you will build will tend to try and
+memorize the training sets.
+And it will usually do that very, very well.
+Your job, though, is to help it generalize to new data instead.
+So, how do we measure the generalization instead of measuring
+how well the classifier memorized the data?
+The simplest way is to take a small subset of the training set.
+Not use it in training and measure the error on that test data.
+Problem solved, now your classifier cannot cheat
+because it never sees the test data so it can't memorize it.
+But there is still a problem because training a classifier is usually
+a process of trial and error.
+You try a classifier, you measure its performance, and
+then you try another one, and you measure again.
+And another, and another.
+You tweak the model, you explore the parameters, you measure, and
+finally, you have what you think is the prefect classifier.
+And then after all this care you've taken to separate your test data from
+your training data and only measuring your performance on the test data,
+now you deploy your system in a real production environment.
+And you get more data.
+And you score your performance on that new data, and
+it doesn't do nearly as well.
+What can possibly have happened?
+What happened is that your classifier has seen your test data
+indirectly through your own eyes.
+Every time you made a decision about which classifier to use, which parameter
+to tune, you actually gave information to your classifier about the test set.
+Just a tiny bit, but it adds up.
+So over time, as you run many and
+many experiments, your test data bleeds into your training data.
+So what can you do?
+There are many ways to deal with this.
+I'll give you the simplest one.
+Take another chunk of your training sets and hide it under a rock.
+Never look at it until you have made your final decision.
+You can use your validation set to measure your actual error and
+maybe the validation set will bleed into the training set.
+But that's okay because you're always have this test set
+that you can rely on to actually measure your real performance
+
+Does splitting your data into three separate data sets
+sound overly complicated?
+Let's look at this in action in the real world.
+Kaggle is a competition platform for machine learning.
+People compete on classification tasks, and
+whoever gets the highest performance wins.
+Here, I'm showing the example of a scientific competition on data that
+relates to the Higgs Boson.
+Kaggle also has three data sets, the training data, the public validation
+data set, and a private data set that is not revealed to the competitors.
+Here Kaggle shows you the performance of the top competitors
+when measured on the private test sets.
+The green and red arrows show how different the ranking was
+compared to the ranking on the public set.
+Let's look at the rankings.
+The top competitors were doing well on the public validation data and
+they remain at the top once their private data was revealed.
+If you go further down the leaderboard, however, it's a real bloodshed.
+Many competitors who thought they were doing well,
+were not doing well at all in the private data sets.
+As a result,
+their ranks went down dramatically once the private data set was revealed.
+Why is that?
+Maybe they had a good model that did well in validation just by chance.
+What's more likely however, is that by validating themselves over and
+over dozens of times on the validation set, they ended up over fitting
+to the validation set and failing to generalize.
+The top competitors] however, had good experimental design.
+They were not misled into thinking that they were doing well.
+They probably took out some of the training sets to validate their
+algorithm or used more sophisticated methods like cross validation and
+didn't make many decisions based on the public data set scores.
+
+I'm not going to talk about cross-validation here, but
+if you've never encountered it in your curriculum,
+I'd strongly recommend that you learn about it.
+I am spending time on this because it's essential to deep learning
+in particular.
+Deep learning has many knobs that you can tweak, and
+you will be tempted to tweak them over and over.
+You have to be very careful about overfitting on your test set.
+Use the validation set.
+How big does your validation and test sets need to be?
+It depends.
+The bigger your validation set the more precise your numbers will be.
+
+17. Validation and Test Set Size
+Imagine that your valuation set has just six examples with an accuracy of 66%.
+Now you tweak your model and
+your performance goes from 66% to 83%, is this something you can trust?
+No of course, this is only a change of label for a single example.
+It could just be noise.
+The bigger you test set, the less noisy the accuracy measurement will be.
+Here is a useful rule of thumb.
+And if you're a statistician, feel free to cover your ears right now.
+A change that affects 30 examples in your validation set, one way or another,
+is usually statistically significant, and typically can be trusted.
+
