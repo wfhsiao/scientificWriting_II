@@ -184,7 +184,7 @@ We're then going to feed the logits, which are scores,
 into a softmax to turn them into probabilities.
 And then we're going to compare those probabilities to the one-hot encoded
 labels using the cross entropy function.
-This entire setting is often called multinomial logistic classification.
+[here2019/2/14]This entire setting is often called multinomial logistic classification.
 
 Okay, so now we have all the pieces of our puzzle.
 The question of course is how we're going to find those weights w and
