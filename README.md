@@ -15,6 +15,15 @@ CBF106054	黃新荃
 CBF106055	馬姵暄
 CBF106056	茆雅淇
 CBF106058	廖怡茹
+
+lover's name 
+terminal illness
+teasing
+cough prescriptions
+Job interview
+granny's peanuts
+hurt from the dentist
+
 </pre>
 學號	姓名	作業一	作業二<br />
 CBF104060	陳順榮	<a href='https://quizlet.com/283330301/language-for-interviews-01-flash-cards/'>quizlet</a><a href='https://www.youtube.com/watch?v=hRGy4WmTIhE'>midterm</a><br />
