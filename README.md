@@ -1,5 +1,21 @@
 # scientificWriting
-
+<pre>
+學號	姓名
+CBF104035	段佳君
+CBF104045	蘇品禎
+CBF106029	劉湘盈
+CBF106033	曾亭宜
+CBF106038	李欣穎
+CBF106041	賴珮瑜
+CBF106042	莊晴如
+CBF106043	彭郁茹
+CBF106046	黃宇鳳
+CBF106047	賴雨函
+CBF106054	黃新荃
+CBF106055	馬姵暄
+CBF106056	茆雅淇
+CBF106058	廖怡茹
+</pre>
 學號	姓名	作業一	作業二<br />
 CBF104060	陳順榮	<a href='https://quizlet.com/283330301/language-for-interviews-01-flash-cards/'>quizlet</a><a href='https://www.youtube.com/watch?v=hRGy4WmTIhE'>midterm</a><br />
 CBF104061	張舒涵	<a href='https://quizlet.com/283347198/02-the-interruption-flash-cards/'>quizlet</a><a href='https://www.youtube.com/watch?v=hNVyhhszVBU&feature=youtu.be'>midterm</a><br />
