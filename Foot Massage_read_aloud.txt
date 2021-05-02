@@ -1,4 +1,4 @@
-【Keywords】
+** Keywords **
 heel
 I can't, my high heels are killing me.
 tip
@@ -15,7 +15,8 @@ clinic
 To celebrate this occasion, his son-in-law Li Jing-liang held a birthday party in his own clinic on September 12th.
 session
 When the brain senses pressure, it exercises muscles to increase blood circulation in order to achieve the effect of relaxing and calming the body.
-【Phrase】
+
+** Phrase **
 Grin and bear it. (Idiom)
 I hate having to work for rude people. I guess I have to grin and bear it.
 What doesn't kill you makes you stronger. 
@@ -27,6 +28,7 @@ All relationships go through rough times. You just have to hang in there.
 Sign up (phr.)
 Mr. Lin is teaching Math this year. I have to go sign up for that class!
 
+** Text **
 The Painful Pleasure of Taiwanese Foot Massage
 John and his foreign colleague Emily, who has just been transferred to Taiwan, are at a foot message clinic.
 (Emily:) Ouch!!
