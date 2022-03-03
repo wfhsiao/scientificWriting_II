@@ -1,20 +1,6 @@
 # scientificWriting
 <pre>
-學號	姓名
-CBF104035	段佳君
-CBF104045	蘇品禎
-CBF106029	劉湘盈
-CBF106033	曾亭宜
-CBF106038	李欣穎
-CBF106041	賴珮瑜
-CBF106042	莊晴如
-CBF106043	彭郁茹
-CBF106046	黃宇鳳
-CBF106047	賴雨函
-CBF106054	黃新荃
-CBF106055	馬姵暄
-CBF106056	茆雅淇
-CBF106058	廖怡茹
+
 
 lover's name 
 terminal illness
